@@ -1,0 +1,395 @@
+    body {
+        font-family: 'Poppins', sans-serif;
+        background: linear-gradient(135deg, #f0f9ff 0%, #e1f5fe 100%);
+        min-height: 100vh;
+    }
+    
+    .card {
+        transition: all 0.3s ease;
+    }
+    
+    .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+    
+    .solution-item {
+        transition: all 0.2s ease;
+    }
+    
+    .solution-item:hover {
+        background-color: #e1f5fe;
+    }
+</style>
+
+    <div id="main-content">
+        <!-- Step 1: Selection Screen -->
+        <div id="selection-screen" class="bg-white rounded-xl shadow-lg p-6 mb-8">
+            <h2 class="text-2xl font-semibold text-blue-700 mb-4">Selecione as assincronias identificadas:</h2>
+            <p class="text-gray-600 mb-6">Marque todas as opções que se aplicam ao paciente.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="card bg-blue-50 rounded-lg p-4 border border-blue-200">
+                    <label class="flex items-start cursor-pointer">
+                        <input type="checkbox" class="asynchrony-checkbox mt-1 h-5 w-5 text-blue-600" value="1">
+                        <span class="ml-3">
+                            <span class="font-medium text-blue-800">1. Disparo ineficaz</span>
+                            <span class="text-gray-600 text-sm block">(esforço ineficaz)</span>
+                        </span>
+                    </label>
+                </div>
+                
+                <div class="card bg-blue-50 rounded-lg p-4 border border-blue-200">
+                    <label class="flex items-start cursor-pointer">
+                        <input type="checkbox" class="asynchrony-checkbox mt-1 h-5 w-5 text-blue-600" value="2">
+                        <span class="ml-3">
+                            <span class="font-medium text-blue-800">2. Disparo falso</span>
+                            <span class="text-gray-600 text-sm block">(autodisparo)</span>
+                        </span>
+                    </label>
+                </div>
+                
+                <div class="card bg-blue-50 rounded-lg p-4 border border-blue-200">
+                    <label class="flex items-start cursor-pointer">
+                        <input type="checkbox" class="asynchrony-checkbox mt-1 h-5 w-5 text-blue-600" value="3">
+                        <span class="ml-3">
+                            <span class="font-medium text-blue-800">3. Disparo tardio</span>
+                            <span class="text-gray-600 text-sm block">(delay de disparo)</span>
+                        </span>
+                    </label>
+                </div>
+                
+                <div class="card bg-blue-50 rounded-lg p-4 border border-blue-200">
+                    <label class="flex items-start cursor-pointer">
+                        <input type="checkbox" class="asynchrony-checkbox mt-1 h-5 w-5 text-blue-600" value="4">
+                        <span class="ml-3">
+                            <span class="font-medium text-blue-800">4. Disparo precoce</span>
+                            <span class="text-gray-600 text-sm block">(sem disparo reverso)</span>
+                        </span>
+                    </label>
+                </div>
+                
+                <div class="card bg-blue-50 rounded-lg p-4 border border-blue-200">
+                    <label class="flex items-start cursor-pointer">
+                        <input type="checkbox" class="asynchrony-checkbox mt-1 h-5 w-5 text-blue-600" value="5">
+                        <span class="ml-3">
+                            <span class="font-medium text-blue-800">5. Disparo precoce</span>
+                            <span class="text-gray-600 text-sm block">(com disparo reverso)</span>
+                        </span>
+                    </label>
+                </div>
+                
+                <div class="card bg-blue-50 rounded-lg p-4 border border-blue-200">
+                    <label class="flex items-start cursor-pointer">
+                        <input type="checkbox" class="asynchrony-checkbox mt-1 h-5 w-5 text-blue-600" value="6">
+                        <span class="ml-3">
+                            <span class="font-medium text-blue-800">6. Múltiplos disparos</span>
+                            <span class="text-gray-600 text-sm block">(Duplo disparo)</span>
+                        </span>
+                    </label>
+                </div>
+                
+                <div class="card bg-blue-50 rounded-lg p-4 border border-blue-200">
+                    <label class="flex items-start cursor-pointer">
+                        <input type="checkbox" class="asynchrony-checkbox mt-1 h-5 w-5 text-blue-600" value="7">
+                        <span class="ml-3">
+                            <span class="font-medium text-blue-800">7. Fluxo excessivo</span>
+                        </span>
+                    </label>
+                </div>
+                
+                <div class="card bg-blue-50 rounded-lg p-4 border border-blue-200">
+                    <label class="flex items-start cursor-pointer">
+                        <input type="checkbox" class="asynchrony-checkbox mt-1 h-5 w-5 text-blue-600" value="8">
+                        <span class="ml-3">
+                            <span class="font-medium text-blue-800">8. Work-Shifting</span>
+                            <span class="text-gray-600 text-sm block">(fluxo insuficiente)</span>
+                        </span>
+                    </label>
+                </div>
+                
+                <div class="card bg-blue-50 rounded-lg p-4 border border-blue-200">
+                    <label class="flex items-start cursor-pointer">
+                        <input type="checkbox" class="asynchrony-checkbox mt-1 h-5 w-5 text-blue-600" value="9">
+                        <span class="ml-3">
+                            <span class="font-medium text-blue-800">9. Ciclagem precoce</span>
+                        </span>
+                    </label>
+                </div>
+                
+                <div class="card bg-blue-50 rounded-lg p-4 border border-blue-200">
+                    <label class="flex items-start cursor-pointer">
+                        <input type="checkbox" class="asynchrony-checkbox mt-1 h-5 w-5 text-blue-600" value="10">
+                        <span class="ml-3">
+                            <span class="font-medium text-blue-800">10. Ciclagem tardia</span>
+                        </span>
+                    </label>
+                </div>
+                
+                <div class="card bg-blue-50 rounded-lg p-4 border border-blue-200">
+                    <label class="flex items-start cursor-pointer">
+                        <input type="checkbox" class="asynchrony-checkbox mt-1 h-5 w-5 text-blue-600" value="11">
+                        <span class="ml-3">
+                            <span class="font-medium text-blue-800">11. Autopeep</span>
+                            <span class="text-gray-600 text-sm block">(paciente passivo)</span>
+                        </span>
+                    </label>
+                </div>
+                
+                <div class="card bg-blue-50 rounded-lg p-4 border border-blue-200">
+                    <label class="flex items-start cursor-pointer">
+                        <input type="checkbox" class="asynchrony-checkbox mt-1 h-5 w-5 text-blue-600" value="12">
+                        <span class="ml-3">
+                            <span class="font-medium text-blue-800">12. Autopeep</span>
+                            <span class="text-gray-600 text-sm block">(paciente ativo)</span>
+                        </span>
+                    </label>
+                </div>
+            </div>
+            
+            <div class="mt-8 text-center">
+                <button id="analyze-btn" class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-8 rounded-lg shadow-md transition duration-300 ease-in-out transform hover:scale-105">
+                    Analisar Assincronias
+                </button>
+            </div>
+        </div>
+        
+        <!-- Step 2: Results Screen -->
+        <div id="results-screen" class="hidden">
+            <h2 class="text-2xl font-semibold text-blue-700 mb-6">Soluções Recomendadas</h2>
+            
+            <div id="solutions-container" class="space-y-6">
+                <!-- Solutions will be dynamically inserted here -->
+            </div>
+            
+            <div class="mt-10 text-center">
+                <button id="back-btn" class="bg-gray-200 hover:bg-gray-300 text-gray-800 font-medium py-2 px-6 rounded-lg mr-4 transition duration-300">
+                    Voltar
+                </button>
+                <button id="print-btn" class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-6 rounded-lg shadow-md transition duration-300">
+                    Imprimir Resultados
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <footer class="mt-12 text-center text-gray-500 text-sm">
+        <p>© 2023 Assistente de Assincronias Ventilatórias</p>
+        <p class="mt-1">Desenvolvido para auxiliar profissionais de saúde no manejo de pacientes em ventilação mecânica</p>
+    </footer>
+</div>
+
+<script>
+    // Database of asynchronies and their solutions
+    const asynchronyData = {
+        1: {
+            name: "Disparo ineficaz (esforço ineficaz)",
+            solutions: [
+                "Aumentar a sensibilidade ('mais leve')",
+                "Reduzir a Pvent (se estiver em excesso)",
+                "Reduzir o Tins",
+                "Reduzir o VC",
+                "Reduzir a Fr",
+                "Reduzir a sedação (ou stop s/n)",
+                "Evitar o autopeep",
+                "Atingir alvo nutricional",
+                "TMI (treinamento muscular inspiratório)"
+            ],
+            notes: "Bias-flow programável pode influenciar também o disparo!"
+        },
+        2: {
+            name: "Disparo falso (autodisparo)",
+            solutions: [
+                "Diminuir a sensibilidade ('mais pesada')",
+                "Evitar vazamentos de ar",
+                "Evitar acúmulo de flúidos no circuitos",
+                "Evitar acúmulo de condensados no circuito",
+                "Diminuir Rva (se estiver elevada)"
+            ],
+            notes: "A pausa expiratória pode ajudar a confirmar a assincronia. Bias-flow programável pode influenciar também o disparo!"
+        },
+        3: {
+            name: "Disparo tardio (delay de disparo)",
+            solutions: [
+                "Aumentar a sensibilidade ('mais leve')",
+                "Evitar o autopeep",
+                "Evitar a sub-assistência",
+                "Manutenção prévia ao VM",
+                "Executar testes prévios do VM"
+            ],
+            notes: "Bias-flow programável pode influenciar também o disparo!"
+        },
+        4: {
+            name: "Disparo precoce (sem disparo reverso)",
+            solutions: [
+                "Reduzir a FR programada (10 a 12 rpm)",
+                "Deixar em PSV",
+                "Reduzir a sedação (ou stop s/n)",
+                "Dar autonomia ventilatória ao paciente"
+            ]
+        },
+        5: {
+            name: "Disparo precoce (com disparo reverso)",
+            solutions: [
+                "Reduzir o strain pulmonar",
+                "Reduzir o VC",
+                "Reduzir o Tins (modos a pressão)",
+                "Reduzir a FR programada",
+                "Reduzir a PEEP"
+            ]
+        },
+        6: {
+            name: "Múltiplos disparos (Duplo disparo)",
+            solutions: [
+                "Resolver a ciclagem precoce (se for)",
+                "Resolver o disparo precoce (se for)",
+                "Resolver o disparo falso (se for)",
+                "Resolver o work-shifting (se for)"
+            ],
+            notes: "É uma assincronia secundária. A causa principal é uma assincronia primária com 4 possíveis hipóteses!"
+        },
+        7: {
+            name: "Fluxo excessivo",
+            solutions: [
+                "Reduzir o fluxo de 'ataque'",
+                "Aumentar o rise time"
+            ]
+        },
+        8: {
+            name: "Work-Shifting (fluxo insuficiente)",
+            solutions: [
+                "Aumentar o Fluxo (VCV)",
+                "Aumentar o VC (VCV)",
+                "Mudar para PCV (fluxo livre)",
+                "Mudar para PSV (fluxo livre)"
+            ]
+        },
+        9: {
+            name: "Ciclagem precoce",
+            solutions: [
+                "Aumentar o período inspiratório",
+                "Aumentar o Tins (PCV/VCV)",
+                "Reduzir a %ciclagem (PSV)",
+                "Aumentar a PS (PSV) - menos usual",
+                "Aumentar o Rise Time (PSV) - menos usual"
+            ]
+        },
+        10: {
+            name: "Ciclagem tardia",
+            solutions: [
+                "Reduzir o período inspiratório",
+                "Reduzir o Tins (PCV/VCV)",
+                "Aumentar a %ciclagem (PSV)",
+                "Reduzir a PS (PSV) - menos usual",
+                "Reduzir o Rise Time (PSV) - menos usual"
+            ]
+        },
+        11: {
+            name: "Autopeep (paciente passivo)",
+            solutions: [
+                "Reduzir a FR programada",
+                "Reduzir o Tins",
+                "Reduzir o VC",
+                "Aumentar a PEEP (em alguns casos com LFE)"
+            ]
+        },
+        12: {
+            name: "Autopeep (paciente ativo)",
+            solutions: [
+                "É consequência da hiperinsuflação dinâmica",
+                "Pode estar relacionado a causas não ventilatórias",
+                "Febre, dor, agitação psicomotora, delirium hiperativo...",
+                "Pode estar relacionado a sub-assistência",
+                "Pode estar relacionado a piora da mecânica (Csr e Rva)",
+                "Pode ser consequência de padrões neurológicos"
+            ]
+        }
+    };
+
+    // DOM elements
+    const analyzeBtn = document.getElementById('analyze-btn');
+    const backBtn = document.getElementById('back-btn');
+    const printBtn = document.getElementById('print-btn');
+    const selectionScreen = document.getElementById('selection-screen');
+    const resultsScreen = document.getElementById('results-screen');
+    const solutionsContainer = document.getElementById('solutions-container');
+    const checkboxes = document.querySelectorAll('.asynchrony-checkbox');
+
+    // Event listeners
+    analyzeBtn.addEventListener('click', showResults);
+    backBtn.addEventListener('click', showSelectionScreen);
+    printBtn.addEventListener('click', printResults);
+
+    // Functions
+    function showResults() {
+        const selectedAsynchronies = [];
+        
+        checkboxes.forEach(checkbox => {
+            if (checkbox.checked) {
+                selectedAsynchronies.push(parseInt(checkbox.value));
+            }
+        });
+        
+        if (selectedAsynchronies.length === 0) {
+            alert('Por favor, selecione pelo menos uma assincronia.');
+            return;
+        }
+        
+        // Generate solutions HTML
+        solutionsContainer.innerHTML = '';
+        
+        selectedAsynchronies.forEach(id => {
+            const asynchrony = asynchronyData[id];
+            
+            const solutionCard = document.createElement('div');
+            solutionCard.className = 'bg-white rounded-xl shadow-md p-6 border-l-4 border-blue-500';
+            
+            let solutionsHTML = '';
+            asynchrony.solutions.forEach(solution => {
+                solutionsHTML += `
+                    <li class="solution-item py-2 px-3 rounded-md mb-2 flex items-start">
+                        <svg class="h-5 w-5 text-blue-500 mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                        <span>${solution}</span>
+                    </li>
+                `;
+            });
+            
+            let notesHTML = '';
+            if (asynchrony.notes) {
+                notesHTML = `
+                    <div class="mt-4 bg-blue-50 p-3 rounded-md">
+                        <p class="text-blue-800 text-sm"><strong>Observação:</strong> ${asynchrony.notes}</p>
+                    </div>
+                `;
+            }
+            
+            solutionCard.innerHTML = `
+                <h3 class="text-xl font-semibold text-blue-800 mb-4">${id}. ${asynchrony.name}</h3>
+                <ul class="space-y-1">
+                    ${solutionsHTML}
+                </ul>
+                ${notesHTML}
+            `;
+            
+            solutionsContainer.appendChild(solutionCard);
+        });
+        
+        // Show results screen
+        selectionScreen.classList.add('hidden');
+        resultsScreen.classList.remove('hidden');
+        
+        // Scroll to top
+        window.scrollTo(0, 0);
+    }
+    
+    function showSelectionScreen() {
+        resultsScreen.classList.add('hidden');
+        selectionScreen.classList.remove('hidden');
+    }
+    
+    function printResults() {
+        window.print();
+    }
+</script>
